@@ -1,0 +1,47 @@
+ntdll!_KPROCESS
+   +0x000 Header           : _DISPATCHER_HEADER
+   +0x018 ProfileListHead  : _LIST_ENTRY
+   +0x028 DirectoryTableBase : Uint8B
+   +0x030 ThreadListHead   : _LIST_ENTRY
+   +0x040 ProcessLock      : Uint4B
+   +0x044 ProcessTimerDelay : Uint4B
+   +0x048 DeepFreezeStartTime : Uint8B
+   +0x050 Affinity         : _KAFFINITY_EX
+   +0x0f8 ReadyListHead    : _LIST_ENTRY
+   +0x108 SwapListEntry    : _SINGLE_LIST_ENTRY
+   +0x110 ActiveProcessors : _KAFFINITY_EX
+   +0x1b8 AutoAlignment    : Pos 0, 1 Bit
+   +0x1b8 DisableBoost     : Pos 1, 1 Bit
+   +0x1b8 DisableQuantum   : Pos 2, 1 Bit
+   +0x1b8 DeepFreeze       : Pos 3, 1 Bit
+   +0x1b8 TimerVirtualization : Pos 4, 1 Bit
+   +0x1b8 CheckStackExtents : Pos 5, 1 Bit
+   +0x1b8 CacheIsolationEnabled : Pos 6, 1 Bit
+   +0x1b8 PpmPolicy        : Pos 7, 3 Bits
+   +0x1b8 VaSpaceDeleted   : Pos 10, 1 Bit
+   +0x1b8 ReservedFlags    : Pos 11, 21 Bits
+   +0x1b8 ProcessFlags     : Int4B
+   +0x1bc ActiveGroupsMask : Uint4B
+   +0x1c0 BasePriority     : Char
+   +0x1c1 QuantumReset     : Char
+   +0x1c2 Visited          : Char
+   +0x1c3 Flags            : _KEXECUTE_OPTIONS
+   +0x1c4 ThreadSeed       : [20] Uint2B
+   +0x1ec IdealProcessor   : [20] Uint2B
+   +0x214 IdealNode        : [20] Uint2B
+   +0x23c IdealGlobalNode  : Uint2B
+   +0x23e Spare1           : Uint2B
+   +0x240 StackCount       : _KSTACK_COUNT
+   +0x248 ProcessListEntry : _LIST_ENTRY
+   +0x258 CycleTime        : Uint8B
+   +0x260 ContextSwitches  : Uint8B
+   +0x268 SchedulingGroup  : Ptr64 _KSCHEDULING_GROUP
+   +0x270 FreezeCount      : Uint4B
+   +0x274 KernelTime       : Uint4B
+   +0x278 UserTime         : Uint4B
+   +0x27c ReadyTime        : Uint4B
+   +0x280 UserDirectoryTableBase : Uint8B
+   +0x288 AddressPolicy    : UChar
+   +0x289 Spare2           : [71] UChar
+   +0x2d0 InstrumentationCallback : Ptr64 Void
+   +0x2d8 SecureState      : <anonymous-tag>

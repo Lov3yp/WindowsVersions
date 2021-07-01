@@ -1,0 +1,124 @@
+ntdll!_ETHREAD
+   +0x000 Tcb              : _KTHREAD
+   +0x480 CreateTime       : _LARGE_INTEGER
+   +0x488 ExitTime         : _LARGE_INTEGER
+   +0x488 KeyedWaitChain   : _LIST_ENTRY
+   +0x498 PostBlockList    : _LIST_ENTRY
+   +0x498 ForwardLinkShadow : Ptr64 Void
+   +0x4a0 StartAddress     : Ptr64 Void
+   +0x4a8 TerminationPort  : Ptr64 _TERMINATION_PORT
+   +0x4a8 ReaperLink       : Ptr64 _ETHREAD
+   +0x4a8 KeyedWaitValue   : Ptr64 Void
+   +0x4b0 ActiveTimerListLock : Uint8B
+   +0x4b8 ActiveTimerListHead : _LIST_ENTRY
+   +0x4c8 Cid              : _CLIENT_ID
+   +0x4d8 KeyedWaitSemaphore : _KSEMAPHORE
+   +0x4d8 AlpcWaitSemaphore : _KSEMAPHORE
+   +0x4f8 ClientSecurity   : _PS_CLIENT_SECURITY_CONTEXT
+   +0x500 IrpList          : _LIST_ENTRY
+   +0x510 TopLevelIrp      : Uint8B
+   +0x518 DeviceToVerify   : Ptr64 _DEVICE_OBJECT
+   +0x520 Win32StartAddress : Ptr64 Void
+   +0x528 ChargeOnlySession : Ptr64 Void
+   +0x530 LegacyPowerObject : Ptr64 Void
+   +0x538 ThreadListEntry  : _LIST_ENTRY
+   +0x548 RundownProtect   : _EX_RUNDOWN_REF
+   +0x550 ThreadLock       : _EX_PUSH_LOCK
+   +0x558 ReadClusterSize  : Uint4B
+   +0x55c MmLockOrdering   : Int4B
+   +0x560 CrossThreadFlags : Uint4B
+   +0x560 Terminated       : Pos 0, 1 Bit
+   +0x560 ThreadInserted   : Pos 1, 1 Bit
+   +0x560 HideFromDebugger : Pos 2, 1 Bit
+   +0x560 ActiveImpersonationInfo : Pos 3, 1 Bit
+   +0x560 HardErrorsAreDisabled : Pos 4, 1 Bit
+   +0x560 BreakOnTermination : Pos 5, 1 Bit
+   +0x560 SkipCreationMsg  : Pos 6, 1 Bit
+   +0x560 SkipTerminationMsg : Pos 7, 1 Bit
+   +0x560 CopyTokenOnOpen  : Pos 8, 1 Bit
+   +0x560 ThreadIoPriority : Pos 9, 3 Bits
+   +0x560 ThreadPagePriority : Pos 12, 3 Bits
+   +0x560 RundownFail      : Pos 15, 1 Bit
+   +0x560 UmsForceQueueTermination : Pos 16, 1 Bit
+   +0x560 IndirectCpuSets  : Pos 17, 1 Bit
+   +0x560 DisableDynamicCodeOptOut : Pos 18, 1 Bit
+   +0x560 ExplicitCaseSensitivity : Pos 19, 1 Bit
+   +0x560 PicoNotifyExit   : Pos 20, 1 Bit
+   +0x560 DbgWerUserReportActive : Pos 21, 1 Bit
+   +0x560 ForcedSelfTrimActive : Pos 22, 1 Bit
+   +0x560 SamplingCoverage : Pos 23, 1 Bit
+   +0x560 ReservedCrossThreadFlags : Pos 24, 8 Bits
+   +0x564 SameThreadPassiveFlags : Uint4B
+   +0x564 ActiveExWorker   : Pos 0, 1 Bit
+   +0x564 MemoryMaker      : Pos 1, 1 Bit
+   +0x564 StoreLockThread  : Pos 2, 2 Bits
+   +0x564 ClonedThread     : Pos 4, 1 Bit
+   +0x564 KeyedEventInUse  : Pos 5, 1 Bit
+   +0x564 SelfTerminate    : Pos 6, 1 Bit
+   +0x564 RespectIoPriority : Pos 7, 1 Bit
+   +0x564 ActivePageLists  : Pos 8, 1 Bit
+   +0x564 SecureContext    : Pos 9, 1 Bit
+   +0x564 ZeroPageThread   : Pos 10, 1 Bit
+   +0x564 WorkloadClass    : Pos 11, 1 Bit
+   +0x564 ReservedSameThreadPassiveFlags : Pos 12, 20 Bits
+   +0x568 SameThreadApcFlags : Uint4B
+   +0x568 OwnsProcessAddressSpaceExclusive : Pos 0, 1 Bit
+   +0x568 OwnsProcessAddressSpaceShared : Pos 1, 1 Bit
+   +0x568 HardFaultBehavior : Pos 2, 1 Bit
+   +0x568 StartAddressInvalid : Pos 3, 1 Bit
+   +0x568 EtwCalloutActive : Pos 4, 1 Bit
+   +0x568 SuppressSymbolLoad : Pos 5, 1 Bit
+   +0x568 Prefetching      : Pos 6, 1 Bit
+   +0x568 OwnsVadExclusive : Pos 7, 1 Bit
+   +0x569 SystemPagePriorityActive : Pos 0, 1 Bit
+   +0x569 SystemPagePriority : Pos 1, 3 Bits
+   +0x569 AllowUserWritesToExecutableMemory : Pos 4, 1 Bit
+   +0x569 AllowKernelWritesToExecutableMemory : Pos 5, 1 Bit
+   +0x569 OwnsVadShared    : Pos 6, 1 Bit
+   +0x569 SessionAttachActive : Pos 7, 1 Bit
+   +0x56a PasidMsrValid    : Pos 0, 1 Bit
+   +0x56c CacheManagerActive : UChar
+   +0x56d DisablePageFaultClustering : UChar
+   +0x56e ActiveFaultCount : UChar
+   +0x56f LockOrderState   : UChar
+   +0x570 PerformanceCountLowReserved : Uint4B
+   +0x574 PerformanceCountHighReserved : Int4B
+   +0x578 AlpcMessageId    : Uint8B
+   +0x580 AlpcMessage      : Ptr64 Void
+   +0x580 AlpcReceiveAttributeSet : Uint4B
+   +0x588 AlpcWaitListEntry : _LIST_ENTRY
+   +0x598 ExitStatus       : Int4B
+   +0x59c CacheManagerCount : Uint4B
+   +0x5a0 IoBoostCount     : Uint4B
+   +0x5a4 IoQoSBoostCount  : Uint4B
+   +0x5a8 IoQoSThrottleCount : Uint4B
+   +0x5ac KernelStackReference : Uint4B
+   +0x5b0 BoostList        : _LIST_ENTRY
+   +0x5c0 DeboostList      : _LIST_ENTRY
+   +0x5d0 BoostListLock    : Uint8B
+   +0x5d8 IrpListLock      : Uint8B
+   +0x5e0 ReservedForSynchTracking : Ptr64 Void
+   +0x5e8 CmCallbackListHead : _SINGLE_LIST_ENTRY
+   +0x5f0 ActivityId       : Ptr64 _GUID
+   +0x5f8 SeLearningModeListHead : _SINGLE_LIST_ENTRY
+   +0x600 VerifierContext  : Ptr64 Void
+   +0x608 AdjustedClientToken : Ptr64 Void
+   +0x610 WorkOnBehalfThread : Ptr64 Void
+   +0x618 PropertySet      : _PS_PROPERTY_SET
+   +0x630 PicoContext      : Ptr64 Void
+   +0x638 UserFsBase       : Uint8B
+   +0x640 UserGsBase       : Uint8B
+   +0x648 EnergyValues     : Ptr64 _THREAD_ENERGY_VALUES
+   +0x650 SelectedCpuSets  : Uint8B
+   +0x650 SelectedCpuSetsIndirect : Ptr64 Uint8B
+   +0x658 Silo             : Ptr64 _EJOB
+   +0x660 ThreadName       : Ptr64 _UNICODE_STRING
+   +0x668 SetContextState  : Ptr64 _CONTEXT
+   +0x670 LastExpectedRunTime : Uint4B
+   +0x674 HeapData         : Uint4B
+   +0x678 OwnerEntryListHead : _LIST_ENTRY
+   +0x688 DisownedOwnerEntryListLock : Uint8B
+   +0x690 DisownedOwnerEntryListHead : _LIST_ENTRY
+   +0x6a0 LockEntries      : [6] _KLOCK_ENTRY
+   +0x8e0 CmThreadInfo     : Ptr64 Void
+   +0x8e8 FlsData          : Ptr64 Void
